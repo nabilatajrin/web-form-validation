@@ -1,2 +1,2 @@
 # web-form-validation
-A sample web project
+This repository contains a sample web project
