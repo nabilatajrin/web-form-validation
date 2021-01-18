@@ -6,13 +6,9 @@
     <!-- For Form validation we have to use JavaScript
     JavaScript needs only a browser to run, there is no need of 
     server to run JavaScript -->
-
     <script language="javascript">
-
         //Start JavaScript Function
-
         function verify() {
-
             //for field must take some input
 			//document.forms[0]
 			//document.forms["form1"]
@@ -21,97 +17,73 @@
                 document.form1.name.focus();
                 return false;
             }
-
             //for field must take some input
-
             if (document.form1.email.value == "") {
                 document.form1.email.focus();
 				alert("Please give the email");
                 return false;
             }
-
             // for field must take some input
-
             if (document.form1.age.value == "") {
                 alert("Please give age");
                 document.form1.age.focus();
                 return false;
             }
-
             // alert thrown when age limit is below 18 and above 60
-
             if (document.form1.age.value < 18 || document.form1.age.value > 60) {
                 alert("Please give Age range between 18 and 60");
                 return false;
             }
-
             // Gender must be selected
-
             if (document.form1.gender[0].checked == false &&
                 document.form1.gender[1].checked == false) {
                 alert("Please select gender");
                 return false;
             }
-
             // At least one checkbox must be checked
-
             if (document.form1.language1.checked == false &&
                 document.form1.language2.checked == false &&
                 document.form1.language3.checked == false) {
                 alert("Please Select your choice of language(Atleast One)");
                 return false;
             }
-
             //Country must be chosed
-
             if (document.form1.country.value == "") {
                 alert("Please give country");
                 document.form1.country.focus();
                 return false;
             }
-
             //field must take some input
-
             if (document.form1.myaddress.value == "") {
                 alert("Please give address");
                 document.form1.myaddress.focus();
                 return false;
             }
-
             //field must take some input
-
             if (document.form1.u_name.value == "") {
                 alert("Please give username");
                 document.form1.u_name.focus();
                 return false;
             }
-
             //field must take some input
-
             if (document.form1.pass.value == "") {
                 alert("Please give Password");
                 document.form1.pass.focus();
                 return false;
             }
-
             //password length must be greater than 5 characters
-
             if (document.form1.pass.value.lenght < 6) {
                 alert("Please give a Password more than 5 characters");
                 document.form1.pass.focus();
                 return false;
             }
-
             // for field must take some input
-
             if (document.form1.r_pass.value == "") {
                 alert("Please retype your password");
                 document.form1.r_pass.focus();
                 return false;
             }
-
             //password and confirm password must matched
-
             if ((document.form1.pass.value) != (document.form1.r_pass.value)) {
                 alert("Your password does not match");
                 document.form1.r_pass.value == "";
@@ -121,22 +93,16 @@
             return true;
         }
     </script>
-
 </head>
-
 <body>
-
 <!-- Creating Form -->
 <form method="POST" action="/" name="form1">
-
     <!-- Creating Table, having 11rows and 2 columns. -->
     <table align="center" border="2" cellpadding="7">
-
         <!-- Start First Row -->
         <tbody><tr>
             <!-- Creating First Column -->
             <td><strong>Name:</strong></td>
-
             <!-- Creating Second Columns -->
             <td>
                 <!-- TextBox -->
@@ -144,10 +110,8 @@
             </td>
             <!-- Close First Row -->
         </tr>
-
         <!-- Creting First Columns -->
         <tr><td><strong>Email:</strong></td>
-
         <!-- Creating Second Columns -->
         <td>
             <!-- Textbox -->
@@ -155,7 +119,6 @@
         </td>
         <!-- Close Second row -->
         </tr>
-
         <tr>
             <td><strong>Age:</strong></td>
             <td>
@@ -163,17 +126,14 @@
                 <input value="" name="age" size="2" type="text">
             </td>
         </tr>
-
         <tr>
             <td><strong>Gender:</strong></td>
             <td>
                 <!-- Radio Butong -->
                 <input name="gender" value="Male" type="radio">Male
                 <input name="gender" value="Female" type="radio">Female
-
             </td>
         </tr>
-
         <tr>
             <td><strong>Language:</strong></td>
             <td>
@@ -183,7 +143,6 @@
                 <input name="language3" value="Urdu" type="checkbox">Urdu
             </td>
         </tr>
-
         <tr>
             <td><strong>Country:</strong></td>
             <td>
@@ -202,7 +161,6 @@
                 </option></select>
             </td>
         </tr>
-
         <tr>
             <td><strong>Address:</strong></td>
             <td>
@@ -210,16 +168,13 @@
                 <textarea rows="5" cols="20" name="myaddress"></textarea>
             </td>
         </tr>
-
         <tr>
             <td><strong>Username:</strong></td>
             <td>
-
                 <!-- Textbox -->
                 <input value="" name="u_name" type="text">
             </td>
         </tr>
-
         <tr>
             <td><strong>Password:</strong></td>
             <td>
@@ -227,7 +182,6 @@
                 <input name="pass" type="password">
             </td>
         </tr>
-
         <tr>
             <td><strong>Retype Password:</strong></td>
             <td>
@@ -235,29 +189,21 @@
                 <input name="r_pass" type="password">
             </td>
         </tr>
-
         <tr align="center">
-
             <td>
                 <!--Submit Button, Function verify need to be called when we process
                 submit button-->
                 <input value="Submit" onclick="verify()" type="submit">
             </td>
-
             <td>
                 <!--Reset Button-->
                 <input type="reset">
             </td>
         </tr>
-
         <!--Table Close-->
 		</tbody>
-		
 	</table>
-
     <!--Form Close -->
 </form>
-
 </body>
-
 </html>
